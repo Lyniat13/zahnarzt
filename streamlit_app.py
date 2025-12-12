@@ -15,7 +15,7 @@ def main():
         ahv = st.text_input("AHV-Nummer")
         praxis_name = st.text_input("Praxisname (z.B Bestprxis)")
         adresse = st.text_input("Adresse (z.B Winterthur")
-        zahnarzt_id = st.text_input("Zahnarzt-ID (p_id)")
+        zahnarzt_id = st.text_input("Zahnarzt-ID (p_id)", min_value=1, step=1)
  
         submitted = st.form_submit_button("Termin hinzufügen")
  
@@ -44,7 +44,7 @@ def main():
                             INSERT INTO termin (p_id, name, adresse)
                             VALUES (:p1, :p2, :p3)
                         """),
-                        {"p1": p_id, "p2": praxis_name, "p3": adresse}
+                        {"pat": p_id, "pname": praxis_name, "paddr": adresse}
                     )
                     # Behnadlung eintragen
                     s.execute(
@@ -53,6 +53,14 @@ def main():
                             VALUES (:p1, :p2)
                         """),
                         {"p1": p_id, "p2": int(zahnarzt_id)}
+                    )
+                    s.execute(
+                        text("""
+                            INSERT INTO praxis (name, adresse)
+                            VALUES (:n, :a)
+                            ON CONFLICT (name, adresse) DO NOTHING
+                        """),
+                        {"n": praxis_name, "a": adresse}
                     )
                     s.commit()
                 st.success(f"Patient erfolgreich hinzugefügt: {vorname} {nachname}")
