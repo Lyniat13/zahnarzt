@@ -25,6 +25,7 @@ Einschreiben des Patienten für einen Termin, welche Praxis, AHV-Nummer, Name, V
 ### 2. Datenanzeige (welche Abfrage wird angezeigt?)
 
 Anzeige von Termin, welcher Zahnarzt
+
 Gefiltert Patient & Zahnarzt mit Attributen & Adresse Praxis
 
 ## Auführen der App
