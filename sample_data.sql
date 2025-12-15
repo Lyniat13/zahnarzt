@@ -18,68 +18,57 @@ VALUES
 ('Bestpraxis', 'Wil');
  
 -- 20 Datensätze für Person
-INSERT INTO person (name, vorname, p_id)
+INSERT INTO person (p_id, name, vorname)
 VALUES
-('Müller', 'Maria', 1111),
-('Weber', 'Anna', 1010),
-('Meier', 'Jonas', 2222),
-('Keller', 'Lisa', 2345),
-('Zahner', 'Daniel', 3333),
-('Roth', 'Martin', 6666),
-('Bucher', 'Max', 4444),
-('Suter', 'Kevin', 7878),
-('Fischer', 'Kim', 5555),
-('Widmer', 'Laura', 3455),
-('Frei', 'Iven', 7777),
-('Moser', 'Lars', 8888),
-('Wenger', 'David', 9999),
-('Maurer', 'Lukas', 0001),
-('Hunziker', 'Monika', 0002),
-('Sutter', 'Julian', 0003),
-('Tanner', 'Laurin', 0004),
-('Egger', 'Beat', 0005),
-('Ammann', 'Tim', 0006),
-('Küng', 'Ralph', 0007);
+(1111, 'Maria', 'Müller'),
+(1010, 'Anna', 'Weber'),
+(2222, 'Jonas', 'Meier'),
+(2345, 'Lisa', 'Keller'),
+(3333, 'Daniel', 'Zahner'),
+(6666, 'Martin', 'Roth'),
+(4444, 'Max', 'Bucher'),
+(7878, 'Kevin', 'Suter'),
+(5555, 'Kim', 'Fischer'),
+(3455, 'Laura', 'Widmer'),
+(7777, 'Iven', 'Frei'),
+(8888, 'Lars', 'Moser'),
+(9999, 'David', 'Wenger'),
+(1, 'Lukas', 'Maurer'),
+(2, 'Monika', 'Hunziker'),
+(3, 'Julian', 'Sutter'),
+(4, 'Laurin', 'Tanner'),
+(5, 'Beat', 'Egger'),
+(6, 'Tim', 'Ammann'),
+(7, 'Ralph', 'Küng');
  
  
 -- 10 Datensätze für Patient
-INSERT INTO patient (ahv, p_id)
+INSERT INTO patient (p_id, ahv)
 VALUES
-('756.1111.1111.11', 1111),
-('756.1010.1010.10', 1010),
-('756.2222.2222.22', 2222),
-('756.2345.2345.23', 2345),
-('756.3333.3333.33', 3333),
-('756.6666.6666.66', 6666),
-('756.4444.4444.44', 4444),
-('756.7878.7878.78', 7878),
-('756.5555.5555.55', 5555),
-('756.3455.3455.34', 3455);
- 
+(1111, '756.1111.1111.11'),
+(1010, '756.1010.1010.10'),
+(2222, '756.2222.2222.22'),
+(2345, '756.2345.2345.23'),
+(3333, '756.3333.3333.33'),
+(6666, '756.6666.6666.66'),
+(4444, '756.4444.4444.44'),
+(7878, '756.7878.7878.78'),
+(5555, '756.5555.5555.55'),
+(3455, '756.3455.3455.34');
  
 -- 10 Datensätze für Zahnarzt
-INSERT INTO zahnarzt (ausbildung, p_id)
+INSERT INTO zahnarzt (p_id, ausbildung)
 VALUES
-('Kieferorthopädie', 0007),
-('Dentalhygienik', 0006),
-('Dentalassistenz', 0005),
-('Zahnmedizin', 0004),
-('Kieferorthopädie', 0003),
-('Dentalhygienik', 0002),
-('Zahnmedizin', 0001),
-('Dentalassistenz', 9999),
-('Zahnmedizin', 8888),
-('Kieferorthopädie', 7777);
- 
- 
--- 5 Datensätze für Termin vereinbaren:
-INSERT INTO termin (name, adresse, p_id)
-VALUES
-('Bestpraxis', 'Zürich', 1010),
-('Bestpraxis', 'Bern', 2345),
-('Bestpraxis', 'Basel', 6666),
-('Bestpraxis', 'Chur', 7878),
-('Bestpraxis', 'Wil', 3455);
+(7, 'Kieferorthopädie'),
+(6, 'Dentalhygienik'),
+(5, 'Dentalassistenz'),
+(4, 'Zahnmedizin'),
+(3, 'Kieferorthopädie'),
+(2, 'Dentalhygienik'),
+(1, 'Zahnmedizin'),
+(9999, 'Dentalassistenz'),
+(8888, 'Zahnmedizin'),
+(7777, 'Kieferorthopädie');
  
 -- 5 Datensätze für behandelt
 INSERT INTO behandelt (pat_p_id, za_p_id)
@@ -91,3 +80,11 @@ VALUES
 (3333, 0003);
  
  
+-- 5 Datensätze für Termin vereinbaren:
+INSERT INTO termin (p_id, praxis_name, praxis_adresse)
+VALUES
+(1010, 'Bestpraxis', 'Zürich'),
+(2345, 'Bestpraxis', 'Bern'),
+(6666, 'Bestpraxis', 'Basel'),
+(7878, 'Bestpraxis', 'Chur'),
+(3455, 'Bestpraxis', 'Wil');
