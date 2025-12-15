@@ -1,4 +1,4 @@
-# [Project Name]
+# Buchung Zahnarzttermin
 
 - Sara Fotakis
 - Natalie Brög
