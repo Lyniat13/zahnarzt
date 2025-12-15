@@ -9,7 +9,11 @@
 
 ## ER Modell
 
-- Beschreibung (welche Entitätstypen, welche Beziehungstypen, wie sind die Kardinalitäten etc)
+- Beschreibung (welche Entitätstypen, welche Beziehungstypen, wie sind die Kardinalitäten etc):
+In unserem ER-Modell gibt es die Entitätstypen Person, Zahnarzt, Patient und Praxis. Die Beziehungstypen sind behandelt und Termin vereinbaren.
+Die Kardinalitäten sind wie folgt definiert: Ein Zahnarzt kann mehrere Patienten behandeln, und ein Patient kann von einem Zahnarzt behandelt werden. Außerdem kann ein Patient einen Termin in der Praxis vereinbaren, und eine Praxis kann von mehreren Patienten für Termine angefragt werden.
+Die Entitätstypen Patient und Zahnarzt sind jeweils Untertypen von Person. Die Praxis wird durch die Attribute Name und Adresse eindeutig identifiziert. Person besitzt den Primärschlüssel P#, der von den Untertypen Patient und Zahnarzt geerbt wird.
+
 - ER-Design Modell in unserem Dialekt. Das ER Bild könnt ihr wie folgt in das Dokument einbinden:
 
 ![ER-Design Mini Projekt](er-design.pdf "ER-Design Mini Projekt")
