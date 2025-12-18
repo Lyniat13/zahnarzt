@@ -69,7 +69,7 @@ def main():
                 st.error("Bitte alle Felder ausfüllen")
 
     # Alle Termine anzeigen
-    st.title("Bestpraxis")
+    st.title("Termine")
  
     conn = st.connection("postgresql", type="sql")
 
