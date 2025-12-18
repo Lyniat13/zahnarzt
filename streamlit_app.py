@@ -72,10 +72,9 @@ def main():
     st.title("Bestpraxis")
  
     conn = st.connection("postgresql", type="sql")
- 
-    st.header("Alle Termine")
+
     try:
-        df = conn.query('SELECT * FROM termin;', ttl=0)
+        df = conn.query('SELECT 1; FROM termin;', ttl=0)
         st.write(df)
     except Exception as e:
         st.exception(e)
