@@ -18,7 +18,7 @@ VALUES
 ('Bestpraxis', 'Wil');
  
 -- 20 Datensätze für Person
-INSERT INTO person (p_id, name, vorname)
+INSERT INTO person (p_id, vorname, name)
 VALUES
 (1111, 'Maria', 'Müller'),
 (1010, 'Anna', 'Weber'),
@@ -88,3 +88,4 @@ VALUES
 (6666, 'Bestpraxis', 'Basel'),
 (7878, 'Bestpraxis', 'Chur'),
 (3455, 'Bestpraxis', 'Wil');
+ 
