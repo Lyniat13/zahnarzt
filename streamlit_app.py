@@ -69,9 +69,12 @@ def main():
                 st.error("Bitte alle Felder ausfüllen")
 
     # Alle Termine anzeigen
-    st.header('Alle Termine')
-    df = conn.query('SELECT * FROM termin;', ttl=0)
-    st.write(df)
+    st.header("Alle Termine")
+    try:
+        df = conn.query('SELECT * FROM termin;', ttl=0)
+        st.write(df)
+     except Exception as e:
+        st.exception(e)
  
 if __name__ == "__main__":
     main()
