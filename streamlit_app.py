@@ -13,7 +13,7 @@ def main():
         vorname = st.text_input("Vorname")
         nachname = st.text_input("Name")
         ahv = st.text_input("AHV-Nummer")
-        praxis_name = st.text_input("Praxisname (z.B Bestprxis)")
+        praxis_name = st.text_input("Praxisname (z.B Bestpraxis)")
         adresse = st.text_input("Adresse (z.B Winterthur")
         zahnarzt_id = st.number_input("Zahnarzt-ID (p_id)", min_value=1, step=1)
  
