@@ -73,7 +73,7 @@ def main():
     try:
         df = conn.query('SELECT * FROM termin;', ttl=0)
         st.write(df)
-     except Exception as e:
+    except Exception as e:
         st.exception(e)
  
 if __name__ == "__main__":
