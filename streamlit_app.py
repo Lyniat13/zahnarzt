@@ -14,7 +14,7 @@ def main():
         nachname = st.text_input("Name")
         ahv = st.text_input("AHV-Nummer")
         praxis_name = st.text_input("Praxisname (z.B Bestpraxis)")
-        adresse = st.text_input("Adresse (z.B Winterthur")
+        adresse = st.text_input("Adresse (z.B Winterthur)")
         zahnarzt_id = st.number_input("Zahnarzt-ID (p_id)", min_value=1, step=1)
  
         submitted = st.form_submit_button("Termin hinzufügen")
@@ -41,7 +41,7 @@ def main():
                     # Termin eintragen
                     s.execute(
                         text("""
-                            INSERT INTO termin (p_id, name, adresse)
+                            INSERT INTO termin (p_id, praxis_name, praxis_adresse)
                             VALUES (:p1, :p2, :p3)
                         """),
                         {"p1": p_id, "p2": praxis_name, "p3": adresse}
