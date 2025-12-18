@@ -69,6 +69,10 @@ def main():
                 st.error("Bitte alle Felder ausfüllen")
 
     # Alle Termine anzeigen
+    st.title("Bestpraxis")
+ 
+    conn = st.connection("postgresql", type="sql")
+ 
     st.header("Alle Termine")
     try:
         df = conn.query('SELECT * FROM termin;', ttl=0)
